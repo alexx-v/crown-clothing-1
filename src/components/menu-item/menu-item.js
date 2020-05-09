@@ -4,9 +4,9 @@ import { withRouter } from 'react-router-dom';
 import './menu-item.scss';
 
 const MenuItem = ({ title, imageUrl, size, history, match, linkUrl }) => {
-	console.log('MenuItem -> history', history);
-	console.log('MenuItem -> linkUrl', linkUrl);
-	console.log('MenuItem -> match', match);
+	// console.log('MenuItem -> history', history);
+	// console.log('MenuItem -> linkUrl', linkUrl);
+	// console.log('MenuItem -> match', match);
 
 	return (
 		<div
