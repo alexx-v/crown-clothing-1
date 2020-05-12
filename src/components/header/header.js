@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { auth } from '../../firebase/firebase.utils';
+import CartIcon from '../cart-icon/cart-icon';
+import CartDropdown from '../cart-dropdown/cart-dropdown';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 
 import './header.scss';
 
-const Header = ({ currentUser }) => {
-	console.log('Header. REDUX. currentUser:', currentUser);
+const Header = ({ currentUser, hidden }) => {
+	// console.log('Header. REDUX. currentUser:', currentUser);
 	return (
 		<div className='header'>
 			<Link className='logo-container' to='/'>
@@ -37,14 +39,17 @@ const Header = ({ currentUser }) => {
 						SIGN IN
 					</Link>
 				)}
+				<CartIcon />
 			</div>
+			{hidden ? null : <CartDropdown />}
 		</div>
 	);
 };
-// mapStateToPros gets root-reducer object, as a parameter.
-// { user } - desctructuring root-reducer object.
-const mapStateToProps = ({ user }) => ({
-	currentUser: user.currentUser,
+// destructuring root-reducer object:
+// { user: { currentUser: null }, cart: { hidden: true } }
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+	currentUser,
+	hidden,
 });
 
 export default connect(mapStateToProps)(Header);
