@@ -9,6 +9,7 @@ import './collection.scss';
 
 const CollectionPage = ({ collection, match }) => {
 	const { title, items } = collection;
+
 	return (
 		<div className='collection-page'>
 			<h2 className='title'>{title}</h2>
@@ -21,8 +22,10 @@ const CollectionPage = ({ collection, match }) => {
 	);
 };
 
-const mapStateToProps = (state, ownProps) => ({
-	collection: selectCollection(ownProps.match.params.collectionId)(state),
-});
+const mapStateToProps = (state, ownProps) => {
+	return {
+		collection: selectCollection(ownProps.match.params.collectionId)(state),
+	};
+};
 
 export default connect(mapStateToProps)(CollectionPage);
