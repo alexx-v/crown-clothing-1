@@ -3,20 +3,18 @@ import React from 'react';
 import {
 	CartItemContainer,
 	CartItemImage,
-	ItemDetails,
-	CartItemName,
-	CartItemPrice,
+	ItemDetailsContainer,
 } from './cart-item.styles';
 
 const CartItem = ({ item: { imageUrl, price, name, quantity } }) => (
 	<CartItemContainer>
 		<CartItemImage src={imageUrl} alt='item' />
-		<ItemDetails className='item-details'>
-			<CartItemName className='name'>{name}</CartItemName>
-			<CartItemPrice className='price'>
+		<ItemDetailsContainer>
+			<span>{name}</span>
+			<span>
 				${price} x {quantity}
-			</CartItemPrice>
-		</ItemDetails>
+			</span>
+		</ItemDetailsContainer>
 	</CartItemContainer>
 );
 

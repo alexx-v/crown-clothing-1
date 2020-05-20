@@ -11,7 +11,7 @@ export const CartItemImage = styled.img`
 	width: 30%;
 `;
 
-export const ItemDetails = styled.div`
+export const ItemDetailsContainer = styled.div`
 	width: 70%;
 	display: flex;
 	flex-direction: column;
@@ -19,9 +19,3 @@ export const ItemDetails = styled.div`
 	justify-content: center;
 	padding: 10px 20px;
 `;
-
-export const CartItemName = styled.span`
-	font-size: 16px;
-`;
-
-export const CartItemPrice = styled.span``;

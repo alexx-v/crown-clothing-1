@@ -10,9 +10,10 @@ export const ItemContainer = styled.div`
 	align-items: center;
 `;
 
-export const ImageContainer = styled.div`
+export const BackgroundImage = styled.div`
 	width: 100%;
 	height: 95%;
+	background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 	background-size: cover;
 	background-position: center;
 	margin-bottom: 5px;
@@ -37,9 +38,10 @@ export const FooterName = styled.span`
 
 export const FooterPrice = styled.span`
 	width: 10%;
+	text-align: right;
 `;
 
-export const CollectionButton = styled(CustomButton)`
+export const AddButton = styled(CustomButton)`
 	display: none;
 	position: absolute;
 	top: 255px;
