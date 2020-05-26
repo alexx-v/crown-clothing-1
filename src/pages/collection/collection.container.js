@@ -8,6 +8,7 @@ import WithSpinner from '../../components/with-spinner/with-spinner';
 import CollectionPage from './collection';
 
 const mapStateToProps = createStructuredSelector({
+	// Here must be a function, not a boolean. That's why { isLoading: !selectIsCollectionsLoaded }, will cause an error.
 	isLoading: (state) => !selectIsCollectionsLoaded(state),
 });
 
