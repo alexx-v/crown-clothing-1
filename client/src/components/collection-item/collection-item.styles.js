@@ -8,6 +8,10 @@ export const ItemContainer = styled.div`
 	flex-direction: column;
 	height: 350px;
 	align-items: center;
+
+	@media screen and (max-width: 800px) {
+		width: 40vw;
+	}
 `;
 
 export const BackgroundImage = styled.div`
