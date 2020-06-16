@@ -16,12 +16,12 @@ export const HeaderContainer = styled.div`
 `;
 
 export const LogoContainer = styled(Link)`
-	padding: 25px;
+	padding: 10px 0;
 	width: 70px;
 	height: 100%;
 
 	@media screen and (max-width: 800px) {
-		padding: 0;
+		padding: 0px;
 		width: 50px;
 	}
 `;

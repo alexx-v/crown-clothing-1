@@ -11,12 +11,20 @@ export const CollectionPreviewContainer = styled.div`
 `;
 
 export const TitleContainer = styled.h1`
-	font-size: 28px;
 	margin-bottom: 25px;
-	cursor: pointer;
 
 	&:hover {
 		color: grey;
+	}
+
+	button {
+		padding: 0;
+		font-size: 28px;
+		font-family: inherit;
+		font-weight: bold;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
 	}
 `;
 
