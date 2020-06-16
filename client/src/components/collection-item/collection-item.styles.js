@@ -9,8 +9,29 @@ export const ItemContainer = styled.div`
 	height: 350px;
 	align-items: center;
 
+	&:hover {
+		.image {
+			opacity: 0.8;
+		}
+	}
+
+	button {
+		display: flex;
+		opacity: 0.85;
+	}
+
 	@media screen and (max-width: 800px) {
 		width: 40vw;
+
+		&:hover {
+			.image {
+				opacity: unset;
+			}
+		}
+
+		button {
+			opacity: unset;
+		}
 	}
 `;
 
@@ -22,9 +43,9 @@ export const BackgroundImage = styled.div`
 	background-position: center;
 	margin-bottom: 5px;
 
-	${ItemContainer}:hover & {
+	/* ${ItemContainer}:hover & {
 		opacity: 0.8;
-	}
+	} */
 `;
 
 export const FooterContainer = styled.div`
@@ -52,8 +73,15 @@ export const AddButton = styled(CustomButton)`
 	width: 80%;
 	opacity: 0.7;
 
-	${ItemContainer}:hover & {
+	@media screen and (max-width: 800px) {
+		display: block;
+		padding: 0 10px;
+		opacity: 0.9;
+		min-width: unset;
+	}
+
+	/* ${ItemContainer}:hover & {
 		display: flex;
 		opacity: 0.85;
-	}
+	} */
 `;
