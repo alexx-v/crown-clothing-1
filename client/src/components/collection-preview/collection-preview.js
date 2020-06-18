@@ -10,8 +10,6 @@ import {
 } from './collection-preview.styles';
 
 const CollectionPreview = ({ title, items, routeName, history, match }) => {
-	console.log(match);
-	console.log('routeName:', routeName);
 	return (
 		<CollectionPreviewContainer>
 			<TitleContainer>
