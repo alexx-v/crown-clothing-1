@@ -79,9 +79,4 @@ export const AddButton = styled(CustomButton)`
 		opacity: 0.9;
 		min-width: unset;
 	}
-
-	/* ${ItemContainer}:hover & {
-		display: flex;
-		opacity: 0.85;
-	} */
 `;
