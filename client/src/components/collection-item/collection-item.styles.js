@@ -3,7 +3,7 @@ import CustomButton from '../custom-button/custom-button';
 
 export const ItemContainer = styled.div`
 	position: relative;
-	width: 22vw;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	height: 350px;
@@ -13,24 +13,22 @@ export const ItemContainer = styled.div`
 		.image {
 			opacity: 0.8;
 		}
-	}
 
-	button {
-		display: flex;
-		opacity: 0.85;
+		button {
+			display: block;
+		}
 	}
 
 	@media screen and (max-width: 800px) {
-		width: 40vw;
-
+		/* width: 40vw; */
 		&:hover {
 			.image {
 				opacity: unset;
 			}
-		}
 
-		button {
-			opacity: unset;
+			button {
+				opacity: unset;
+			}
 		}
 	}
 `;
@@ -42,10 +40,6 @@ export const BackgroundImage = styled.div`
 	background-size: cover;
 	background-position: center;
 	margin-bottom: 5px;
-
-	/* ${ItemContainer}:hover & {
-		opacity: 0.8;
-	} */
 `;
 
 export const FooterContainer = styled.div`

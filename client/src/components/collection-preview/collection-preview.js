@@ -17,7 +17,7 @@ const CollectionPreview = ({ title, items, routeName, history, match }) => {
 					type='button'
 					onClick={() => history.push(`${match.url}/${routeName}`)}
 				>
-					{title.toUpperCase()}
+					{title.toUpperCase()} &#10093;
 				</button>
 			</TitleContainer>
 			<PreviewContainer>

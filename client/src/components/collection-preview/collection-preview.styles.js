@@ -3,19 +3,15 @@ import styled from 'styled-components';
 export const CollectionPreviewContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 30px;
+	/* margin-bottom: 30px; */
 
-	@media screen and (max-width: 800px) {
+	/* @media screen and (max-width: 800px) {
 		align-items: center;
-	}
+	} */
 `;
 
-export const TitleContainer = styled.h1`
-	margin-bottom: 25px;
-
-	&:hover {
-		color: grey;
-	}
+export const TitleContainer = styled.div`
+	margin-bottom: 29.2px;
 
 	button {
 		padding: 0;
@@ -25,16 +21,27 @@ export const TitleContainer = styled.h1`
 		background-color: transparent;
 		border: none;
 		cursor: pointer;
+
+		&:hover {
+			color: grey;
+		}
 	}
 `;
 
 export const PreviewContainer = styled.div`
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 20px;
+	/* display: flex;
+	justify-content: space-between; */
+
+	& > div {
+		margin-bottom: 30px;
+	}
 
 	@media screen and (max-width: 800px) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 15px;
+		grid-gap: 10px;
 	}
 `;
