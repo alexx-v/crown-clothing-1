@@ -9,7 +9,7 @@ export const HeaderContainer = styled.div`
 	margin-bottom: 25px;
 
 	@media screen and (max-width: 800px) {
-		padding: 10px;
+		padding: 0px;
 		margin-bottom: 20px;
 		height: 60px;
 	}
@@ -22,6 +22,7 @@ export const LogoContainer = styled(Link)`
 
 	@media screen and (max-width: 800px) {
 		padding: 0px;
+		padding-top: 5px;
 		width: 50px;
 	}
 `;
